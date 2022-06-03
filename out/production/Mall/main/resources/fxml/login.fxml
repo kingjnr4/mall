@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.Login">
+   <top>
+      <AnchorPane fx:id="header" prefHeight="40.0" prefWidth="700.0" styleClass="top" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="close" fitHeight="24.0" fitWidth="24.0" layoutX="662.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/close_window_48px.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="minimize" fitHeight="24.0" fitWidth="24.0" layoutX="632.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimize_window_24px.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Blend />
+         </effect></AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="83.0" layoutY="40.0" prefHeight="48.0" prefWidth="167.0" text="LOGIN" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="84.0" layoutY="139.0" prefHeight="17.0" prefWidth="120.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="txtuser" alignment="CENTER_LEFT"  layoutX="84.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="198.0" styleClass="tags">
+               <effect>
+                  <Glow level="0.66" />
+               </effect></MFXTextField>
+            <Label layoutX="84.0" layoutY="230.0" prefHeight="17.0" prefWidth="120.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <MFXPasswordField fx:id="txtpass" layoutX="84.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="198.0" styleClass="tags" />
+            <MFXButton fx:id="button" layoutX="196.0" layoutY="339.0" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: black;" textFill="WHITE" />
+         </children></AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: #ee9a4c;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>
