@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.StockitemsController">
+   <children>
+      <AnchorPane layoutX="7.0" prefHeight="646.0" prefWidth="350.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="80.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="Choose Product">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <MFXTableView fx:id="sTable" layoutX="14.0" layoutY="60.0" prefHeight="189.0" prefWidth="327.0" />
+            <MFXComboBox fx:id="combo" layoutX="21.0" layoutY="294.0" />
+            <MFXTextField fx:id="txtSrc" floatMode="DISABLED" floatingText="Search" layoutX="143.0" layoutY="290.0" prefHeight="49.0" prefWidth="166.0" />
+            <MFXButton fx:id="btnSel" buttonType="RAISED" layoutX="115.0" layoutY="379.0" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: black;" text="Select" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </MFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="357.0" prefHeight="646.0" prefWidth="447.0" style="-fx-background-color: #ee9a4c;">
+         <children>
+            <Pane layoutX="105.0" layoutY="66.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="imgBar" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="130.0" layoutY="32.0" prefHeight="17.0" prefWidth="125.0" text="Product Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="246.0" prefHeight="21.0" prefWidth="94.0" text="Qty To add">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="txtQty" floatMode="DISABLED" floatingText="Search" layoutX="125.0" layoutY="237.0" prefHeight="40.0" prefWidth="125.0" />
+            <Label layoutX="11.0" layoutY="313.0" prefHeight="21.0" prefWidth="94.0" text="New Price">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="txtRprice" floatMode="DISABLED" floatingText="Search" layoutX="125.0" layoutY="309.0" prefHeight="40.0" prefWidth="125.0" />
+            <Label layoutX="14.0" layoutY="375.0" prefHeight="21.0" prefWidth="94.0" text="Cost Price">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <MFXTextField fx:id="txtCprice" floatMode="DISABLED" floatingText="Search" layoutX="125.0" layoutY="366.0" prefHeight="40.0" prefWidth="125.0" />
+            <MFXButton fx:id="btnGen" buttonType="RAISED" layoutX="116.0" layoutY="434.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: black;" text="Update" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </MFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

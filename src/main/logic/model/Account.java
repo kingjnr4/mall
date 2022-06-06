@@ -1,42 +1,15 @@
 package main.logic.model;
 
-import main.logic.Role;
-
-import java.util.Date;
-
 public class Account {
-    String name,surname,gender;
-    Date dob;
-    Role role;
+    String username,password,fullname;
 
-    public Account(String name, String surname, String gender, Date dob, Role role) {
-        this.name = name;
-        this.surname = surname;
-        this.gender = gender;
-        this.dob = dob;
-        this.role = role;
+    public Account setUsername(String username) {
+        this.username = username;
+        return this;
     }
 
-    public String getName() {
-        return name;
+    public Account setFullname(String fullname) {
+        this.fullname = fullname;
+        return this;
     }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public Date getDob() {
-        return dob;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-
-
 }
