@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
 <?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
 <?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
@@ -10,6 +11,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" stylesheets="@../css/login.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.Login">
@@ -44,17 +46,23 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <MFXTextField fx:id="txtuser" alignment="CENTER_LEFT"  layoutX="84.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="198.0" styleClass="tags">
-               <effect>
-                  <Glow level="0.66" />
-               </effect></MFXTextField>
+            <MFXTextField fx:id="txtuser" alignment="TOP_LEFT" layoutX="84.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="198.0" style="-fx-text-fill: black;" styleClass="tags">
+
+               <font>
+                  <Font size="15.0" />
+               </font>
+               </MFXTextField>
             <Label layoutX="84.0" layoutY="230.0" prefHeight="17.0" prefWidth="120.0" text="Password">
                <font>
-                  <Font size="14.0" />
+                  <Font size="15.0" />
                </font>
             </Label>
-            <MFXPasswordField fx:id="txtpass" layoutX="84.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="198.0" styleClass="tags" />
+            <MFXPasswordField fx:id="txtpass" alignment="TOP_LEFT" layoutX="84.0" layoutY="268.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="198.0" styleClass="tags">
+               <font>
+                  <Font size="15.0" />
+               </font></MFXPasswordField>
             <MFXButton fx:id="button" layoutX="196.0" layoutY="339.0" prefHeight="34.0" prefWidth="86.0" style="-fx-background-color: black;" textFill="WHITE" />
+            <MFXComboBox fx:id="cmbrole" alignment="TOP_LEFT" layoutX="107.0" layoutY="88.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="136.0" promptText="ROLE" styleClass="cmb" />
          </children></AnchorPane>
    </center>
    <right>

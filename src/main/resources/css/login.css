@@ -1,9 +1,10 @@
 .top{
 -fx-border-width:0 0 1px 0;
 -fx-border-color:black;
--fx-border-style:hidden hidden dashed hidden;
+-fx-border-style:hidden hidden visible hidden;
 }
 
 .tags:focus-within{
 -fx-border-color:#ee9a4c;
+-fx-text-fill:black;
 }

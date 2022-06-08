@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="803.0" stylesheets="@../css/admin_emp.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <MFXTableView layoutX="60.0" layoutY="149.0" prefHeight="174.0" prefWidth="683.0" />
+        <AnchorPane layoutX="60.0" layoutY="103.0" prefHeight="49.0" prefWidth="683.0" style="-fx-background-color: white;" styleClass="pane">
+            <children>
+                <MFXButton depthLevel="LEVEL1" layoutX="7.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-add" stylesheets="@../css/admin_emp.css" text="Register" textFill="WHITE" />
+                <MFXButton depthLevel="LEVEL1" disable="true" layoutX="586.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-upd" stylesheets="@../css/admin_emp.css" text="Update" textFill="WHITE" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

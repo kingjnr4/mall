@@ -1,9 +1,8 @@
 package main.controller;
 
-import io.github.palexdev.materialfx.controls.MFXButton;
-import io.github.palexdev.materialfx.controls.MFXCheckListView;
-import io.github.palexdev.materialfx.controls.MFXPasswordField;
-import io.github.palexdev.materialfx.controls.MFXTextField;
+import io.github.palexdev.materialfx.controls.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import main.logic.Role;
 import main.logic.model.Account;
 
 import java.io.IOException;
@@ -25,6 +25,8 @@ public class Login implements Initializable {
 
     private double xOffset;
     private double yOffset;
+    @FXML
+    MFXComboBox cmbrole;
     @FXML
     AnchorPane header;
     @FXML
@@ -44,6 +46,9 @@ public class Login implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        ObservableList<String> roles = FXCollections.observableArrayList(Role.ADMIN.toString(),Role.BOOKKEEPER.toString(),Role.CASHIER.toString());
+        cmbrole.setItems(roles);
+        setBtn();
         close.setOnMouseClicked((MouseEvent e)->{
           close.getScene().getWindow().hide();
         });
@@ -51,8 +56,21 @@ public class Login implements Initializable {
             ((Stage) minimize.getScene().getWindow()).setIconified(true);
         });
         txtpass.setAnimated(true);
+        txtuser.textProperty().addListener(((observableValue, s, t1) -> setBtn()));
+        txtpass.textProperty().addListener(((observableValue, s, t1) -> setBtn()));
+        cmbrole.textProperty().addListener(((observableValue, s, t1) -> setBtn()));
         button.setOnMouseClicked(mouseEvent -> {
-            Switch();
+            switch (cmbrole.getSelectedIndex()){
+                case 1:
+                    navigate("/main/resources/fxml/bookkeeper.fxml");
+                    break;
+                case 0:
+                    navigate("/main/resources/fxml/admin.fxml");
+                    break;
+                case 2:
+                    navigate("/main/resources/fxml/cashier.fxml");
+                    break;
+            }
         });
         header.setOnMousePressed(event -> {
             xOffset = ((Stage) close.getScene().getWindow()).getX() - event.getScreenX();
@@ -63,12 +81,19 @@ public class Login implements Initializable {
             ((Stage) close.getScene().getWindow()).setY(event.getScreenY() + yOffset);
         });
     }
-    void Switch(){
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/main/resources/fxml/stockitemsupd.fxml.fxml"));
+    void setBtn (){
+        if (txtuser.getText().isEmpty() || txtpass.getText().isEmpty() ||cmbrole.getValue()==null){
+            button.setDisable(true);
+            return;
+
+        }
+        button.setDisable(false);
+    }
+    void navigate(String fxml){
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));
         try {
             Parent root = loader.load();
-            BookkeeperController controller = loader.getController();
-           // controller.setAccount(new Account().setFullname("Noble abaeze").setUsername("Kingjnr"));
+//
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setResizable(false);

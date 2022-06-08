@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXTableView?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="646.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.StockitemsController">
+   <AnchorPane layoutX="7.0" prefHeight="646.0" prefWidth="350.0" style="-fx-background-color: white;">
+      <Label alignment="CENTER" layoutX="80.0" layoutY="14.0" prefHeight="17.0" prefWidth="125.0" text="Choose Supplier">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <MFXTableView fx:id="sTable" layoutX="14.0" layoutY="60.0" prefHeight="189.0" prefWidth="327.0" />
+      <MFXComboBox fx:id="combo" layoutX="21.0" layoutY="294.0" />
+      <MFXTextField fx:id="txtSrc" floatMode="DISABLED" floatingText="Search" layoutX="143.0" layoutY="290.0" prefHeight="49.0" prefWidth="166.0" />
+      <MFXButton fx:id="btnSel" buttonType="RAISED" layoutX="115.0" layoutY="379.0" prefHeight="40.0" prefWidth="104.0" style="-fx-background-color: black;" text="Select" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXButton>
+   </AnchorPane>
+   <AnchorPane layoutX="357.0" prefHeight="646.0" prefWidth="447.0" style="-fx-background-color: #ee9a4c;">
+      <Label alignment="CENTER" layoutX="130.0" layoutY="32.0" prefHeight="17.0" prefWidth="125.0" text="Product Details">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <MFXComboBox alignment="TOP_LEFT" floatMode="BORDER" layoutX="134.0" layoutY="77.0" promptText="Category" />
+      <MFXTextField fx:id="txtSpl" allowEdit="false" floatMode="DISABLED" floatingText="Search" layoutX="132.0" layoutY="123.0" prefHeight="40.0" prefWidth="125.0" />
+      <Label layoutX="11.0" layoutY="133.0" prefHeight="21.0" prefWidth="94.0" text="Supplier ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="11.0" layoutY="195.0" prefHeight="21.0" prefWidth="94.0" text=" Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtPname" floatMode="DISABLED" floatingText="Search" layoutX="132.0" layoutY="185.0" prefHeight="40.0" prefWidth="125.0" />
+      <Label layoutX="11.0" layoutY="246.0" prefHeight="21.0" prefWidth="94.0" text="Quantity">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtQty" floatMode="DISABLED" floatingText="Search" layoutX="131.0" layoutY="236.0" prefHeight="40.0" prefWidth="125.0" />
+      <Label layoutX="11.0" layoutY="318.0" prefHeight="21.0" prefWidth="94.0" text="Retail Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtRprice" floatMode="DISABLED" floatingText="Search" layoutX="128.0" layoutY="309.0" prefHeight="40.0" prefWidth="125.0" />
+      <Label layoutX="14.0" layoutY="375.0" prefHeight="21.0" prefWidth="94.0" text="Cost Price">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <MFXTextField fx:id="txtCprice" floatMode="DISABLED" floatingText="Search" layoutX="131.0" layoutY="366.0" prefHeight="40.0" prefWidth="125.0" />
+      <Pane layoutX="11.0" layoutY="416.0" style="-fx-background-color: white;">
+         <ImageView fx:id="imgBar" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" />
+      </Pane>
+      <MFXButton fx:id="btnGen" buttonType="RAISED" layoutX="133.0" layoutY="582.0" prefHeight="40.0" prefWidth="143.0" style="-fx-background-color: black;" text="Generate Barcode" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXButton>
+      <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="437.0" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: white;" text="Print">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXButton>
+      <MFXButton buttonType="RAISED" layoutX="181.0" layoutY="491.0" prefHeight="40.0" prefWidth="86.0" style="-fx-background-color: white;" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </MFXButton>
+   </AnchorPane>
+</AnchorPane>

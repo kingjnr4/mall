@@ -11,7 +11,7 @@
          <children>
             <MFXButton depthLevel="LEVEL1" layoutX="7.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-add" stylesheets="@../css/admin_emp.css" text="Register" textFill="WHITE" />
             <MFXButton depthLevel="LEVEL1" disable="true" layoutX="586.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-upd" stylesheets="@../css/admin_emp.css" text="Update" textFill="WHITE" />
-            <MFXButton depthLevel="LEVEL1" disable="true" layoutX="486.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-del" stylesheets="@../css/admin_emp.css" text="Block" textFill="WHITE" />
+            <MFXButton depthLevel="LEVEL1" disable="true" layoutX="486.0" layoutY="10.0" prefHeight="30.0" prefWidth="83.0" rippleRadiusMultiplier="5.0" styleClass="pane-del" stylesheets="@../css/admin_emp.css" text="Sack" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>
